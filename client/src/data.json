@@ -1,27 +1,22 @@
-{
-    "extern":[
+
+    [
         {
             "id":0,
             "task": "Turism",
-            "time":0
+            "category":"extern"
         },
         {
             "id":1,
             "task":"Övrigt",
-            "time":0
-        }
-    ],
-    "intern":[
-        {
-            "id":0,
+            "category":"extern"
+        },        {
+            "id":2,
             "task": "Leasingbilar",
-            "time":0
+            "category":"intern"
         },
         {
-            "id":1,
-            "task":"Leasingbilar",
-            "time":0
+            "id":3,
+            "task":"Nycklar",
+            "category":"intern"
         }
     ]
-
-}
