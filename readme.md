@@ -9,3 +9,12 @@
 - Time Slot Tracking: Implement a feature to log the timing and duration of customer service interactions using time slots. The application will categorize the service interactions into specific time intervals, such as 8:00-9:00, 10:00-12:00, 13:00-15:00, and so on. This functionality enables precise tracking and analysis of service trends over time, including the specific time slots during which services were rendered.
 
 - User-Friendly Interface: Design an intuitive and user-friendly interface to ensure ease of use, particularly for new employees. This approach enhances their onboarding experience and contributes to overall time efficiency.
+
+///
+
+# Thoughts
+
+- I want to get my Array of "matters" to the statisticPanel, there i want to to display them one by one.
+- for each "matter" I want to create a function that takes in the matter and add one into the matter if we click the button.
+- The matter should be displayed as a Icon and if we hover over we get a text explaining what the icon stands for./or we take in the name under the icon possibly.
+-
