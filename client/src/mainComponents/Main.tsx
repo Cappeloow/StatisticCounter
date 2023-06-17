@@ -1,13 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import StatisticPanel from "../ReusableComponents/StatisticPanel";
-import TotalSumDisplay from "../ReusableComponents/TotalSumDisplay";
+import LandingPage from "../pages/LandingPage";
+import ResultPage from "../pages/ResultPage";
+import Adminstration from "../pages/Adminstration";
 function Main() {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<StatisticPanel />} />
-        <Route path="/statistic" element={<TotalSumDisplay />} />
+        <Route path="/admin" element={<Adminstration />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/result" element={<ResultPage />} />
       </Routes>
     </main>
   );

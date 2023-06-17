@@ -1,7 +1,7 @@
 import React from "react";
 
-function TotalSumDisplay() {
+function ResultPage() {
   return <div>TotalSumDisplay</div>;
 }
 
-export default TotalSumDisplay;
+export default ResultPage;

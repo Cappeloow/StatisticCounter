@@ -1,7 +1,7 @@
 import React from "react";
 
-const StatisticPanel = () => {
+function StatisticPanel() {
   return <div>StatisticPanel</div>;
-};
+}
 
 export default StatisticPanel;

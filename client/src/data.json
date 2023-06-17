@@ -1,0 +1,27 @@
+{
+    "extern":[
+        {
+            "id":0,
+            "task": "Turism",
+            "time":0
+        },
+        {
+            "id":1,
+            "task":"Övrigt",
+            "time":0
+        }
+    ],
+    "intern":[
+        {
+            "id":0,
+            "task": "Leasingbilar",
+            "time":0
+        },
+        {
+            "id":1,
+            "task":"Leasingbilar",
+            "time":0
+        }
+    ]
+
+}
