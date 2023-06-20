@@ -3,7 +3,7 @@ import "../style/Footer.css";
 function Footer() {
   return (
     <footer>
-      <p>skapad av:Casper Wernersson</p>
+      <p>Skapad av: Casper Wernersson</p>
     </footer>
   );
 }
