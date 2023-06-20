@@ -1,12 +1,20 @@
 import React from "react";
-import { Card } from "antd";
+import { Card, Typography } from "antd";
+import "../style/Card.css";
 function DataCard(props) {
   const { matter, addAmountToMatter } = props;
+  const { Title, Text } = Typography;
   return (
     <Card>
       <div>
-        <h1 onClick={() => addAmountToMatter(matter)}>{matter.task}</h1>
-        <p>{matter.amount}</p>
+        <Title
+          className="titleAddNumber"
+          level={2}
+          onClick={() => addAmountToMatter(matter)}
+        >
+          {matter.task}
+        </Title>
+        <Text>{matter.amount}</Text>
       </div>
     </Card>
   );

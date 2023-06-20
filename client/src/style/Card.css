@@ -1,0 +1,5 @@
+.titleAddNumber:hover{
+color: rgb(136, 195, 246);
+transition:1s;
+cursor:pointer;
+}
