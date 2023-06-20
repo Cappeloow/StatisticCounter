@@ -14,7 +14,7 @@ function DataCard(props) {
         >
           {matter.task}
         </Title>
-        <Text>Totalt för dagen {matter.amount}</Text>
+        <Text>Antal ärende: {matter.amount} st</Text>
       </div>
     </Card>
   );

@@ -19,12 +19,14 @@ export interface StatisticContext {
   matters: IMatter[];
   getStatistics: () => void;
   addAmountToMatter: (matter: IMatter) => void;
+  dailyResults: (matters: IMatter[]) => number;
 }
 
 const StatisticContext = createContext<StatisticContext>({
   matters: [],
   getStatistics: () => {},
   addAmountToMatter: () => {},
+  dailyResults: () => {},
 });
 
 export const useStatisticContext = () => useContext(StatisticContext);
@@ -57,6 +59,15 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
     getStatistics();
   }, []);
 
+  const dailyResults = (matters: IMatter[]) => {
+    const collectedAmount = matters.map((matter) => matter.amount);
+    const sumWithInitial = collectedAmount.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    return sumWithInitial;
+  };
+
   return (
     <div>
       <StatisticContext.Provider
@@ -64,6 +75,7 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
           matters,
           getStatistics,
           addAmountToMatter,
+          dailyResults,
         }}
       >
         {children}

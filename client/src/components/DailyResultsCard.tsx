@@ -1,9 +1,16 @@
 import React from "react";
+import { Typography } from "antd";
+import { useStatisticContext } from "../context/StatisticContext";
+function DailyResultsCard() {
+  const { dailyResults, matters } = useStatisticContext();
+  const { Title } = Typography;
+  const result = dailyResults(matters);
 
-type Props = {};
-
-function DailyResultsCard({}: Props) {
-  return <div>DailyResultsCard</div>;
+  return (
+    <div>
+      <Title level={4}>Totalt för dagen: {result}</Title>
+    </div>
+  );
 }
 
 export default DailyResultsCard;

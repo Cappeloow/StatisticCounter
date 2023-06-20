@@ -1,15 +1,46 @@
-import React from "react";
+import DailyResultsCard from "./DailyResultsCard";
+import { useState, useEffect } from "react";
+import { Typography } from "antd";
+import "../style/Main.css";
 import { useStatisticContext } from "../context/StatisticContext";
 import DataCard from "./DataCard";
 function StatisticPanel() {
   const { matters, addAmountToMatter } = useStatisticContext();
+
+  const { Title } = Typography;
+
+  const [day, setDay] = useState("");
+
+  function getCurrentDay() {
+    const day = new Date();
+    const weekday = [
+      "Söndag",
+      "Måndag",
+      "Tisdag",
+      "Onsdag",
+      "Torsdag",
+      "Fredag",
+      "Lördag",
+    ];
+    const currentDay = weekday[day.getDay()];
+    setDay(currentDay);
+  }
+
+  useEffect(() => {
+    getCurrentDay();
+  }, []);
+
   return (
     <div>
+      <Title className="DayOfTheWeek" level={1}>
+        {day}
+      </Title>
       {matters.map((matter) => (
         <div key={matter.id}>
           <DataCard matter={matter} addAmountToMatter={addAmountToMatter} />
         </div>
       ))}
+      <DailyResultsCard />
     </div>
   );
 }
