@@ -1,13 +1,13 @@
 import React from "react";
 import { useStatisticContext } from "../context/StatisticContext";
+import DataCard from "./DataCard";
 function StatisticPanel() {
   const { matters, addAmountToMatter } = useStatisticContext();
   return (
     <div>
       {matters.map((matter) => (
         <div key={matter.id}>
-          <h1 onClick={() => addAmountToMatter(matter)}>{matter.task}</h1>
-          <p>{matter.amount}</p>
+          <DataCard matter={matter} addAmountToMatter={addAmountToMatter} />
         </div>
       ))}
     </div>
