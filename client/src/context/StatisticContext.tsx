@@ -10,7 +10,7 @@ import { useLocalStorage } from "../hooks/localstorage";
 export interface IMatter {
   id: number;
   task: string;
-  time: string[];
+  time: number[];
   amount: number;
   category: string;
 }
@@ -26,7 +26,7 @@ const StatisticContext = createContext<StatisticContext>({
   matters: [],
   getStatistics: () => {},
   addAmountToMatter: () => {},
-  dailyResults: () => {},
+  dailyResults: () => 0,
 });
 
 export const useStatisticContext = () => useContext(StatisticContext);
@@ -38,18 +38,24 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
     const currentItem = matters.find((item: IMatter) => item.id === matter.id);
     const currentDate = new Date();
     const options = { timeZone: "Europe/Stockholm" };
-    const swedishTime = currentDate.toLocaleString("sv-SE", options);
+    const swedishTime = currentDate.toLocaleTimeString("sv-SE", options);
+    const timeParts = swedishTime.split(":");
+    const hours = parseInt(timeParts[0]);
 
-    console.log(swedishTime);
     //kanske vill lägga specifika tider i arrayer?
     // för att sedan lägga in arrayer i en egen kub för att redovisa antalet i length?
 
     if (currentItem) {
       currentItem.amount++;
-      currentItem.time.push(swedishTime);
+      currentItem.time.push(hours);
       setMatters([...matters]);
     }
   };
+
+  useEffect(() => {
+    // This code will execute whenever the matters state changes
+    console.log(matters);
+  }, [matters]);
 
   async function getStatistics() {
     setMatters(data);

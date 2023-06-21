@@ -35,9 +35,34 @@ function StatisticPanel() {
       <Title className="DayOfTheWeek" level={1}>
         {day}
       </Title>
+      <Title level={3}>Extern</Title>
       {matters.map((matter) => (
         <div key={matter.id}>
-          <DataCard matter={matter} addAmountToMatter={addAmountToMatter} />
+          <div>
+            {matter.category === "extern" ? (
+              <>
+                <DataCard
+                  matter={matter}
+                  addAmountToMatter={addAmountToMatter}
+                />
+              </>
+            ) : null}
+          </div>
+        </div>
+      ))}
+      <Title level={3}>Intern</Title>
+      {matters.map((matter) => (
+        <div key={matter.id}>
+          <div>
+            {matter.category === "intern" ? (
+              <>
+                <DataCard
+                  matter={matter}
+                  addAmountToMatter={addAmountToMatter}
+                />
+              </>
+            ) : null}
+          </div>
         </div>
       ))}
       <DailyResultsCard />
