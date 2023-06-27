@@ -18,3 +18,8 @@
 - for each "matter" I want to create a function that takes in the matter and add one into the matter if we click the button.
 - The matter should be displayed as a Icon and if we hover over we get a text explaining what the icon stands for./or we take in the name under the icon possibly.
 - I need to display each days tasks in a timeframe, but also all timeframes for each task in one box.
+
+### Weekly Statistics.
+
+- Basically we'll save all the days in one page, where we can display the total sum of the week and the each day total also.
+-
