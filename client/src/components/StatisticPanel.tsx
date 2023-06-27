@@ -65,6 +65,7 @@ function StatisticPanel() {
           </div>
         </div>
       ))}
+
       <DailyResultsCard />
     </div>
   );
