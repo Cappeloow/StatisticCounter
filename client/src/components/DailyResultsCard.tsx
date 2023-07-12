@@ -40,13 +40,6 @@ function DailyResultsCard() {
         thirteen={thirteen.length}
         result={result}
       />
-      <div className="Eight">
-        <p>08.00-09.00: {eight.length}</p>
-        <p>12.00-13.00: {twelve.length}</p>
-        <p>13.00-16.00: {thirteen.length}</p>
-      </div>
-      <p>09.00-12.00: {nine.length}</p>
-      <Title level={4}>Totalt för dagen: {result}</Title>
     </div>
   );
 }

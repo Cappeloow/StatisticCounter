@@ -17,7 +17,7 @@ interface TimeTableProps {
 }
 const columns: ColumnsType<DataType> = [
   {
-    title: "Name",
+    title: "Tid",
     dataIndex: "name",
     key: "name",
     render: (text) => <a>{text}</a>,
