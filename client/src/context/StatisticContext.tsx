@@ -32,7 +32,7 @@ const StatisticContext = createContext<StatisticContext>({
 export const useStatisticContext = () => useContext(StatisticContext);
 
 const StatisticProvider = ({ children }: PropsWithChildren) => {
-  const [matters, setMatters] = useLocalStorage("cart", []);
+  const [matters, setMatters] = useLocalStorage("statistics", []);
 
   const addAmountToMatter = (matter: IMatter) => {
     const currentItem = matters.find((item: IMatter) => item.id === matter.id);
@@ -58,7 +58,12 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
   }, [matters]);
 
   async function getStatistics() {
-    setMatters(data);
+    const storedMatters = localStorage.getItem("statistics");
+    if (storedMatters) {
+      setMatters(JSON.parse(storedMatters));
+    } else {
+      setMatters(data);
+    }
   }
 
   useEffect(() => {
