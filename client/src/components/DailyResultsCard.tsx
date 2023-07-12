@@ -3,6 +3,7 @@ import { Typography } from "antd";
 import { useStatisticContext } from "../context/StatisticContext";
 import TimeTable from "./timeTable";
 function DailyResultsCard() {
+  //state som sätter in antal interna och externa med?
   const { dailyResults, matters } = useStatisticContext();
   const { Title } = Typography;
   const result = dailyResults(matters);
