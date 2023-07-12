@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Typography } from "antd";
 import { useStatisticContext } from "../context/StatisticContext";
-
+import TimeTable from "./timeTable";
 function DailyResultsCard() {
   const { dailyResults, matters } = useStatisticContext();
   const { Title } = Typography;
@@ -33,12 +33,19 @@ function DailyResultsCard() {
 
   return (
     <div>
+      <TimeTable
+        eight={eight.length}
+        nine={nine.length}
+        twelve={twelve.length}
+        thirteen={thirteen.length}
+        result={result}
+      />
       <div className="Eight">
-        <p>09.00-12.00: {nine.length}</p>
         <p>08.00-09.00: {eight.length}</p>
         <p>12.00-13.00: {twelve.length}</p>
         <p>13.00-16.00: {thirteen.length}</p>
       </div>
+      <p>09.00-12.00: {nine.length}</p>
       <Title level={4}>Totalt för dagen: {result}</Title>
     </div>
   );
