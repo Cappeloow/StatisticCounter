@@ -32,7 +32,7 @@ const StatisticContext = createContext<StatisticContext>({
 export const useStatisticContext = () => useContext(StatisticContext);
 
 const StatisticProvider = ({ children }: PropsWithChildren) => {
-  const [matters, setMatters] = useLocalStorage("statistics", []);
+  const [matters, setMatters] = useLocalStorage("statistics", data);
 
   const addAmountToMatter = (matter: IMatter) => {
     const currentItem = matters.find((item: IMatter) => item.id === matter.id);

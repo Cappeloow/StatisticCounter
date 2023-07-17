@@ -31,7 +31,10 @@ function DailyResultsCard() {
   useEffect(() => {
     CalculateArrayOfTimes();
   }, [matters]);
-
+  const resetStatistics = () => {
+    localStorage.removeItem("statistics");
+    window.location.reload();
+  };
   return (
     <div>
       <TimeTable
@@ -41,6 +44,7 @@ function DailyResultsCard() {
         thirteen={thirteen.length}
         result={result}
       />
+      <button onClick={resetStatistics}>Reset Statistics</button>
     </div>
   );
 }
