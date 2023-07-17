@@ -20,6 +20,7 @@ export interface StatisticContext {
   getStatistics: () => void;
   addAmountToMatter: (matter: IMatter) => void;
   dailyResults: (matters: IMatter[]) => number;
+  copyNumber: (e: any) => void;
 }
 
 const StatisticContext = createContext<StatisticContext>({
@@ -27,6 +28,7 @@ const StatisticContext = createContext<StatisticContext>({
   getStatistics: () => {},
   addAmountToMatter: () => {},
   dailyResults: () => 0,
+  copyNumber: () => {},
 });
 
 export const useStatisticContext = () => useContext(StatisticContext);
@@ -79,6 +81,28 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
     return sumWithInitial;
   };
 
+  function copyNumber(e: any) {
+    const textField = document.createElement("textarea");
+    textField.value = e.target.textContent;
+
+    document.body.appendChild(textField);
+
+    textField.select();
+    textField.setSelectionRange(0, 99999); // For mobile devices
+
+    document.execCommand("copy");
+    document.body.removeChild(textField);
+
+    const copiedTextElement = document.createElement("p");
+    copiedTextElement.className = "textCopied";
+    copiedTextElement.textContent = "Copied";
+
+    e.target.parentNode.appendChild(copiedTextElement);
+    setTimeout(() => {
+      e.target.parentNode.removeChild(copiedTextElement);
+    }, 2000);
+  }
+
   return (
     <div>
       <StatisticContext.Provider
@@ -87,6 +111,7 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
           getStatistics,
           addAmountToMatter,
           dailyResults,
+          copyNumber,
         }}
       >
         {children}
