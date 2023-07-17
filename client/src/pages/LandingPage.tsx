@@ -1,4 +1,3 @@
-import React from "react";
 import StatisticPanel from "../components/StatisticPanel";
 const LandingPage = () => {
   return (

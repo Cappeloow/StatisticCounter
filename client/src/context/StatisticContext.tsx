@@ -1,10 +1,4 @@
-import {
-  PropsWithChildren,
-  useEffect,
-  useState,
-  createContext,
-  useContext,
-} from "react";
+import { PropsWithChildren, useEffect, createContext, useContext } from "react";
 import data from "../data.json";
 import { useLocalStorage } from "../hooks/localstorage";
 export interface IMatter {

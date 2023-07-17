@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Typography } from "antd";
+import { useEffect, useState } from "react";
 import { useStatisticContext } from "../context/StatisticContext";
-import TimeTable from "./timeTable";
+import TimeTable from "./TimeTable";
 function DailyResultsCard() {
   //state som sätter in antal interna och externa med?
   const { dailyResults, matters } = useStatisticContext();
-  const { Title } = Typography;
+
   const result = dailyResults(matters);
-  const [nine, setNine] = useState([]);
-  const [eight, setEight] = useState([]);
-  const [twelve, setTwelve] = useState([]);
-  const [thirteen, setThirteen] = useState([]);
+  const [nine, setNine] = useState<number[]>([]);
+  const [eight, setEight] = useState<number[]>([]);
+  const [twelve, setTwelve] = useState<number[]>([]);
+  const [thirteen, setThirteen] = useState<number[]>([]);
 
   function CalculateArrayOfTimes() {
     const allTimes = matters.flatMap((matter) => matter.time);

@@ -1,8 +1,7 @@
-import React from "react";
 import { useStatisticContext } from "../context/StatisticContext";
 import { Card, Typography } from "antd";
 import "../style/Card.css";
-function DataCard(props) {
+function DataCard(props: any) {
   const { matter, addAmountToMatter } = props;
   const { Title, Text } = Typography;
   const { copyNumber } = useStatisticContext();

@@ -1,7 +1,6 @@
 import React from "react";
-import { Space, Table, Tag, Typography } from "antd";
+import { Table, Typography } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { useStatisticContext } from "../context/StatisticContext";
 interface DataType {
   key: string;
   name: string;
@@ -28,13 +27,11 @@ const columns: ColumnsType<DataType> = [
     title: "Antal",
     dataIndex: "age",
     key: "age",
-    render: (text) => <Text onClick={() => copyNumber(text)}>{text}</Text>,
   },
 ];
 
 const TimeTable: React.FC<TimeTableProps> = (props) => {
   const { eight, nine, twelve, thirteen, result } = props;
-  const { copyNumber } = useStatisticContext();
   const data: DataType[] = [
     {
       key: "1",
