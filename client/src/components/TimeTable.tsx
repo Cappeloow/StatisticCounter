@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, Table, Tag } from "antd";
+import { Space, Table, Tag, Typography } from "antd";
 import type { ColumnsType } from "antd/es/table";
 
 interface DataType {
@@ -7,6 +7,8 @@ interface DataType {
   name: string;
   age: number;
 }
+
+const { Text } = Typography;
 
 interface TimeTableProps {
   eight: number;
@@ -20,7 +22,7 @@ const columns: ColumnsType<DataType> = [
     title: "Tid",
     dataIndex: "name",
     key: "name",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <Text>{text}</Text>,
   },
   {
     title: "Antal",
@@ -55,7 +57,7 @@ const TimeTable: React.FC<TimeTableProps> = (props) => {
     },
     {
       key: "5",
-      name: "totalt för dagen",
+      name: "Totalt för dagen",
       age: result,
     },
   ];

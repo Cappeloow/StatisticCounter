@@ -3,3 +3,17 @@ color: rgb(136, 195, 246);
 transition:1s;
 cursor:pointer;
 }
+.Card {
+    display:flex;
+    gap:40px;
+    justify-content: center;
+    position:relative;
+}
+
+.amountNumber{
+    font-size:30px;
+    cursor:pointer;
+}
+.textCopied {
+    position:absolute;
+}

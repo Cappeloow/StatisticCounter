@@ -2,4 +2,10 @@
 
     letter-spacing: 5px;
     text-align: center;
+    margin-top:10px;
+}
+
+
+.internText, .externText {
+    margin-left:10px;
 }
