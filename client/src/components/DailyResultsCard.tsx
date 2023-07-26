@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStatisticContext } from "../context/StatisticContext";
 import TimeTable from "./TimeTable";
+import { Button } from "antd";
 function DailyResultsCard() {
   //state som sätter in antal interna och externa med?
   const { dailyResults, matters } = useStatisticContext();
@@ -43,7 +44,7 @@ function DailyResultsCard() {
         thirteen={thirteen.length}
         result={result}
       />
-      <button onClick={resetStatistics}>Reset Statistics</button>
+      <Button onClick={resetStatistics}>Reset Statistics</Button>
     </div>
   );
 }
