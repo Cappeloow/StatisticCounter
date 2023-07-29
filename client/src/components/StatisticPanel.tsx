@@ -35,7 +35,7 @@ function StatisticPanel() {
       <Title className="DayOfTheWeek" level={1}>
         {day}
       </Title>
-      <Title level={3} className="externText">
+      <Title style={{ userSelect: "none" }} level={3} className="externText">
         Extern
       </Title>
       {matters.map((matter) => (
@@ -52,7 +52,7 @@ function StatisticPanel() {
           </div>
         </div>
       ))}
-      <Title level={3} className="internText">
+      <Title style={{ userSelect: "none" }} level={3} className="internText">
         Intern
       </Title>
       {matters.map((matter) => (

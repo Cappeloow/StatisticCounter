@@ -1,6 +1,7 @@
 import React from "react";
 import { Table, Typography } from "antd";
 import type { ColumnsType } from "antd/es/table";
+import "../style/Table.css";
 interface DataType {
   key: string;
   name: string;
@@ -21,12 +22,12 @@ const columns: ColumnsType<DataType> = [
     title: "Tid",
     dataIndex: "name",
     key: "name",
-    render: (text) => <Text>{text}</Text>,
   },
   {
     title: "Antal",
     dataIndex: "age",
     key: "age",
+    render: (text) => <Text onClick={(e) => copyNumber(e)}>{text}</Text>,
   },
 ];
 
@@ -60,7 +61,31 @@ const TimeTable: React.FC<TimeTableProps> = (props) => {
     },
   ];
 
-  return <Table columns={columns} dataSource={data} />;
+  return (
+    <Table style={{ userSelect: "none" }} columns={columns} dataSource={data} />
+  );
 };
 
 export default TimeTable;
+
+function copyNumber(e: any) {
+  const textField = document.createElement("textarea");
+  textField.value = e.target.textContent;
+
+  document.body.appendChild(textField);
+
+  textField.select();
+  textField.setSelectionRange(0, 99999); // For mobile devices
+
+  document.execCommand("copy");
+  document.body.removeChild(textField);
+
+  const copiedTextElement = document.createElement("p");
+  copiedTextElement.className = "textCopied";
+  copiedTextElement.textContent = "Kopierat!";
+
+  e.target.parentNode.appendChild(copiedTextElement);
+  setTimeout(() => {
+    e.target.parentNode.removeChild(copiedTextElement);
+  }, 2000);
+}

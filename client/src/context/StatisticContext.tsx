@@ -89,7 +89,7 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
 
     const copiedTextElement = document.createElement("p");
     copiedTextElement.className = "textCopied";
-    copiedTextElement.textContent = "Copied";
+    copiedTextElement.textContent = "Kopierat!";
 
     e.target.parentNode.appendChild(copiedTextElement);
     setTimeout(() => {
