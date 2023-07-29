@@ -82,7 +82,7 @@ const StatisticProvider = ({ children }: PropsWithChildren) => {
     document.body.appendChild(textField);
 
     textField.select();
-    textField.setSelectionRange(0, 99999); // For mobile devices
+    textField.setSelectionRange(0, 99999);
 
     document.execCommand("copy");
     document.body.removeChild(textField);

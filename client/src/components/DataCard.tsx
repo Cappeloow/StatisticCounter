@@ -7,25 +7,26 @@ function DataCard(props: any) {
   const { copyNumber } = useStatisticContext();
 
   const handleClicker = (e: any) => {
-    e.preventDefault();
+    e.stopPropagation();
     copyNumber(e);
   };
   return (
     <Card onClick={() => addAmountToMatter(matter)}>
       <div className="Card">
-        <Title
-          style={{ userSelect: "none" }}
-          className="titleAddNumber"
-          level={2}
-        >
-          {matter.task}
-        </Title>
-        <div className="containerOfCardNumber">
-          <Text
+        <div className="containerOfMatter">
+          <Title
             style={{ userSelect: "none" }}
-            className="amountNumber"
-            onClick={(e) => handleClicker(e)}
+            className="titleOfMatter"
+            level={2}
           >
+            {matter.task}
+          </Title>
+        </div>
+        <div
+          onClick={(e) => handleClicker(e)}
+          className="containerOfCardNumber"
+        >
+          <Text style={{ userSelect: "none" }} className="amountNumber">
             {matter.amount}
           </Text>
         </div>

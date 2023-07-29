@@ -1,13 +1,32 @@
 .DayOfTheWeek{
-
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     text-align: center;
-    margin-top:10px;
+    margin-top:30px;
+    border-bottom:1px solid black;
+    padding:10px;
+    text-transform: uppercase;
+    
 }
+
 
 
 .internText, .externText {
     margin-left:10px;
     padding:20px;
     background-color: rgba(127, 255, 212, 0.094);
+}
+
+.tidTabelText {
+    margin-top:30px;
+    width:100%;
+    background-color: rgba(127, 255, 212, 0.094);
+    text-align: center;
+    height:100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+}
+.tidTabelText > * {
+    letter-spacing: 10px;
 }

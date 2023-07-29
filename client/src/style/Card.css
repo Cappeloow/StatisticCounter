@@ -5,15 +5,38 @@ cursor:pointer;
 }
 .Card {
     display:flex;
-    gap:40px;
-    justify-content: center;
+    justify-content: space-evenly;
     position:relative;
 }
 
+.containerOfCardNumber {
+    width:60px;
+    background-color: rgba(241, 230, 230, 0.281);
+    border-radius: 10px;
+    text-align: center;
+    transition:1s;
+    
+}
+
+.containerOfMatter {
+    background-color: rgba(241, 230, 230, 0.281);
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+
+  }
+
+.containerOfCardNumber:hover{
+    background-color: rgba(63, 134, 78, 0.281);
+    text-align: center;
+    border-radius: 15px;
+    width:70px;
+    transition:1s;
+}
 .amountNumber{
     font-size:30px;
     cursor:pointer;
 }
 .textCopied {
     position:absolute;
-}
+}   

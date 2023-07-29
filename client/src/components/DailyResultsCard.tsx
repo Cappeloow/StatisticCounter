@@ -20,6 +20,7 @@ function DailyResultsCard() {
     const timesBetween13And16 = allTimes.filter(
       (time) => time >= 13 && time <= 16
     );
+
     const timesEqualTo8 = allTimes.filter((time) => time === 8);
     const timesEqualTo12 = allTimes.filter((time) => time === 12);
     setEight(timesEqualTo8);
