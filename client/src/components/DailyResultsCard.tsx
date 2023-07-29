@@ -15,7 +15,7 @@ function DailyResultsCard() {
   function CalculateArrayOfTimes() {
     const allTimes = matters.flatMap((matter) => matter.time);
     const timesBetween9And12 = allTimes.filter(
-      (time) => time >= 9 && time <= 12
+      (time) => time >= 9 && time < 12
     );
     const timesBetween13And16 = allTimes.filter(
       (time) => time >= 13 && time <= 16
