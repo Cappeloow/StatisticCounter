@@ -12,3 +12,7 @@
     border-radius:10px;
     text-align: center;
 }
+
+.totalSumOfEach > div > * {
+    user-select: none;
+}
