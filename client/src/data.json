@@ -1,28 +1,247 @@
 
+    
+    
     [
         {
             "id":0,
-            "task": "Turism",
+            "task": "Reception",
             "amount":0,
             "time":[""],
             "category":"extern"
         },
         {
             "id":1,
+            "task":"Reception",
+            "icon":"tm",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":2,
+            "task": "Infomailen",
+            "amount":0,
+            "icon":"mail",
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":3,
+            "task":"Inpassage",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":4,
+            "task":"Turism",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":5,
+            "task":"Turism",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":6,
+            "task":"Evenemangsbiljetter",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":7,
+            "task":"Evenemangsbiljetter",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":8,
+            "task":"Föreningar",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":9,
+            "task":"Föreningar",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":10,
+            "task":"Konsumentrådgivning",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":11,
+            "task":"Konsumentrådgivning",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":12,
+            "task":"Lokalbokning",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":13,
+            "task":"Lokalbokning",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":14,
+            "task":"Lokalnycklar/taggar",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":15,
+            "task":"Lokalbokning",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":16,
+            "task":"Fonder",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":17,
+            "task":"Fonder",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":18,
+            "task":"Tomtkö",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":19,
+            "task":"Tomtkö",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":20,
+            "task":"Blanketter",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":21,
+            "task":"Blanketter",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":22,
+            "task":"Polisen",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":23,
+            "task":"Utländska",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":24,
+            "task":"Utländska",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":25,
             "task":"Övrigt",
             "amount":0,
             "time":[""],
             "category":"extern"
-        },        {
-            "id":2,
-            "task": "Leasingbilar",
+        },
+        {
+            "id":26,
+            "task":"Övrigt",
+            "icon":"TM",
+            "amount":0,
+            "time":[""],
+            "category":"extern"
+        },
+        {
+            "id":27,
+            "task":"Kuponger",
             "amount":0,
             "time":[""],
             "category":"intern"
         },
         {
-            "id":3,
-            "task":"Nycklar",
+            "id":28,
+            "task":"Tjänsteresor",
+            "amount":0,
+            "time":[""],
+            "category":"intern"
+        },
+        {
+            "id":29,
+            "task":"Leasingbil/Cykel",
+            "amount":0,
+            "time":[""],
+            "category":"intern"
+        },
+        {
+            "id":30,
+            "task":"Sammanträdesrum",
+            "amount":0,
+            "time":[""],
+            "category":"intern"
+        },
+        {
+            "id":31,
+            "task":"Telefoni",
+            "amount":0,
+            "time":[""],
+            "category":"intern"
+        },
+        {
+            "id":32,
+            "task":"Övrigt",
             "amount":0,
             "time":[""],
             "category":"intern"

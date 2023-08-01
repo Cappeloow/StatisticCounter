@@ -22,8 +22,8 @@ cursor:pointer;
     background-color: rgba(241, 230, 230, 0.281);
     text-align: center;
     border-radius: 10px;
-    width: 200px;
-
+    width: 400px;
+    padding:10px;
   }
 
 .containerOfCardNumber:hover{
