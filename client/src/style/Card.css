@@ -15,7 +15,9 @@ cursor:pointer;
     border-radius: 10px;
     text-align: center;
     transition:1s;
-    
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerOfMatter {
@@ -24,6 +26,9 @@ cursor:pointer;
     border-radius: 10px;
     width: 400px;
     padding:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 
 .containerOfCardNumber:hover{

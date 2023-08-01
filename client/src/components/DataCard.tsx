@@ -19,7 +19,7 @@ function DataCard(props: any) {
           <Title
             style={{ userSelect: "none" }}
             className="titleOfMatter"
-            level={2}
+            level={3}
           >
             {matter.task}
             <br></br>
