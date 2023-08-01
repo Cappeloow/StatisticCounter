@@ -45,9 +45,9 @@ function DailyResultsCard() {
         thirteen={thirteen.length}
         result={result}
       />
-      <Button className="resetButton" onClick={resetStatistics}>
+      <button className="resetButton" onClick={resetStatistics}>
         Reset
-      </Button>
+      </button>
     </div>
   );
 }

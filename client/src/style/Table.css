@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+
 .resetButton {
     background-color: rgba(255, 0, 0, 0.539);
     color:whitesmoke;
+    height:50px;
+    width:120px;
+    border-radius:15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size:20px;
 }
+.resetButton:hover {
+    background-color: rgba(255, 0, 0, 0.292);
+    color:whitesmoke;
+    height:50px;
+    cursor:pointer;
+}
+
