@@ -13,7 +13,7 @@ function DataCard(props: any) {
     copyNumber(e);
   };
   const handlePropgation = (e: any) => {
-    e.preventDefault();
+    e.stopPropagation();
   };
   return (
     <Card onClick={() => addAmountToMatter(matter)}>
@@ -38,10 +38,14 @@ function DataCard(props: any) {
           </Title>
         </div>
         <div
-          onClick={(e) => handleClicker(e)}
+          onClick={(e) => handlePropgation(e)}
           className="containerOfCardNumber"
         >
-          <Text style={{ userSelect: "none" }} className="amountNumber">
+          <Text
+            onClick={(e) => handleClicker(e)}
+            style={{ userSelect: "none" }}
+            className="amountNumber"
+          >
             {matter.amount}
           </Text>
         </div>
