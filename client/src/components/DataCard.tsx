@@ -29,17 +29,17 @@ function DataCard(props: any) {
             {matter.icon === "TM" ? (
               <>
                 <MailOutlined style={{ fontSize: "24px" }} />
-
                 <PhoneOutlined />
               </>
             ) : null}
           </Title>
         </div>
-        <div
-          onClick={(e) => handleClicker(e)}
-          className="containerOfCardNumber"
-        >
-          <Text style={{ userSelect: "none" }} className="amountNumber">
+        <div className="containerOfCardNumber">
+          <Text
+            onClick={(e) => handleClicker(e)}
+            style={{ userSelect: "none" }}
+            className="amountNumber"
+          >
             {matter.amount}
           </Text>
         </div>

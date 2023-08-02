@@ -14,7 +14,7 @@
     font-size:20px;
 }
 .resetButton:hover {
-    background-color: rgba(255, 0, 0, 0.292);
+    background-color: rgba(255, 0, 0, 0.61);
     color:whitesmoke;
     height:50px;
     cursor:pointer;

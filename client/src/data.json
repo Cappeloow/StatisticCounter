@@ -12,7 +12,7 @@
         {
             "id":1,
             "task":"Reception",
-            "icon":"tm",
+            "icon":"TM",
             "amount":0,
             "time":[""],
             "category":"extern"
