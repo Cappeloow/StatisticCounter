@@ -90,7 +90,12 @@ const TimeTable: React.FC<TimeTableProps> = (props) => {
   ];
 
   return (
-    <Table style={{ userSelect: "none" }} columns={columns} dataSource={data} />
+    <Table
+      style={{ userSelect: "none" }}
+      columns={columns}
+      dataSource={data}
+      pagination={false}
+    />
   );
 };
 

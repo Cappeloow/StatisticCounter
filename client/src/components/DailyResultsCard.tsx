@@ -59,6 +59,12 @@ function DailyResultsCard() {
     CalculateInternLength();
     CalculateExternLength();
   }, [matters]);
+
+  const [showResetConfirmation, setShowResetConfirmation] = useState(false);
+
+  const handleResetClick = () => {
+    setShowResetConfirmation(true);
+  };
   const resetStatistics = () => {
     localStorage.removeItem("statistics");
     window.location.reload();
@@ -76,9 +82,18 @@ function DailyResultsCard() {
         thirteenInt={thirteenInt.length}
         result={result}
       />
-      <button className="resetButton" onClick={resetStatistics}>
+      <button className="resetButton" onClick={handleResetClick}>
         Reset
       </button>
+      {showResetConfirmation && (
+        <div className="warningSign">
+          <p>Är du säker på att du vill börja om?</p>
+          <Button onClick={resetStatistics}>Ja</Button>
+          <Button onClick={() => setShowResetConfirmation(false)}>
+            Avbryt
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
