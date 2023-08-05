@@ -4,10 +4,7 @@ import { useStatisticContext } from "../context/StatisticContext";
 function BoxesOfIntExtern() {
   const { matters, copyNumber } = useStatisticContext();
   const calculateIntern = () => {
-    console.log(matters);
-
     const filteredIntern = matters.filter((item) => item.category === "intern");
-    console.log("this is:", filteredIntern);
 
     const totalSumOfIntern = filteredIntern.reduce(
       (sum, item) => sum + item.amount,
@@ -17,10 +14,7 @@ function BoxesOfIntExtern() {
   };
 
   const calculateExtern = () => {
-    console.log(matters);
-
     const filteredIntern = matters.filter((item) => item.category === "extern");
-    console.log("this is:", filteredIntern);
 
     const totalSumOfIntern = filteredIntern.reduce(
       (sum, item) => sum + item.amount,

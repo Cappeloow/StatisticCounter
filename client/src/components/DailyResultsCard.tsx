@@ -12,15 +12,22 @@ function DailyResultsCard() {
   const [twelve, setTwelve] = useState<number[]>([]);
   const [thirteen, setThirteen] = useState<number[]>([]);
 
-  function CalculateArrayOfTimes() {
-    const allTimes = matters.flatMap((matter) => matter.time);
+  const [eightInt, setEightInt] = useState<number[]>([]);
+  const [nineInt, setNineInt] = useState<number[]>([]);
+  const [twelveInt, setTwelveInt] = useState<number[]>([]);
+  const [thirteenInt, setThirteenInt] = useState<number[]>([]);
+
+  function CalculateExternLength() {
+    const externTimes = matters.filter(
+      (matter) => matter.category === "extern"
+    );
+    const allTimes = externTimes.flatMap((matter) => matter.time);
     const timesBetween9And12 = allTimes.filter(
       (time) => time >= 9 && time < 12
     );
     const timesBetween13And16 = allTimes.filter(
       (time) => time >= 13 && time <= 16
     );
-
     const timesEqualTo8 = allTimes.filter((time) => time === 8);
     const timesEqualTo12 = allTimes.filter((time) => time === 12);
     setEight(timesEqualTo8);
@@ -29,8 +36,28 @@ function DailyResultsCard() {
     setThirteen(timesBetween13And16);
   }
 
+  function CalculateInternLength() {
+    const internTimes = matters.filter(
+      (matter) => matter.category === "intern"
+    );
+    const allTimes = internTimes.flatMap((matter) => matter.time);
+    const timesBetween9And12 = allTimes.filter(
+      (time) => time >= 9 && time < 12
+    );
+    const timesBetween13And16 = allTimes.filter(
+      (time) => time >= 13 && time <= 16
+    );
+    const timesEqualTo8 = allTimes.filter((time) => time === 8);
+    const timesEqualTo12 = allTimes.filter((time) => time === 12);
+    setEightInt(timesEqualTo8);
+    setNineInt(timesBetween9And12);
+    setTwelveInt(timesEqualTo12);
+    setThirteenInt(timesBetween13And16);
+  }
+
   useEffect(() => {
-    CalculateArrayOfTimes();
+    CalculateInternLength();
+    CalculateExternLength();
   }, [matters]);
   const resetStatistics = () => {
     localStorage.removeItem("statistics");
@@ -43,6 +70,10 @@ function DailyResultsCard() {
         nine={nine.length}
         twelve={twelve.length}
         thirteen={thirteen.length}
+        eightInt={eightInt.length}
+        nineInt={nineInt.length}
+        twelveInt={twelveInt.length}
+        thirteenInt={thirteenInt.length}
         result={result}
       />
       <button className="resetButton" onClick={resetStatistics}>

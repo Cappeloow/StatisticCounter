@@ -2,10 +2,12 @@ import React from "react";
 import { Table, Typography } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import "../style/Table.css";
+
 interface DataType {
   key: string;
   name: string;
-  age: number;
+  externa: number;
+  interna: string | number;
 }
 
 const { Text } = Typography;
@@ -15,8 +17,13 @@ interface TimeTableProps {
   nine: number;
   twelve: number;
   thirteen: number;
+  eightInt: number;
+  nineInt: number;
+  twelveInt: number;
+  thirteenInt: number;
   result: number;
 }
+
 const columns: ColumnsType<DataType> = [
   {
     title: "Tid",
@@ -24,40 +31,61 @@ const columns: ColumnsType<DataType> = [
     key: "name",
   },
   {
-    title: "Antal",
-    dataIndex: "age",
-    key: "age",
+    title: "Externa",
+    dataIndex: "externa",
+    key: "externa",
+    render: (text) => <Text onClick={(e) => copyNumber(e)}>{text}</Text>,
+  },
+  {
+    title: "Interna",
+    dataIndex: "interna",
+    key: "interna",
     render: (text) => <Text onClick={(e) => copyNumber(e)}>{text}</Text>,
   },
 ];
 
 const TimeTable: React.FC<TimeTableProps> = (props) => {
-  const { eight, nine, twelve, thirteen, result } = props;
+  const {
+    eight,
+    nine,
+    twelve,
+    thirteen,
+    result,
+    eightInt,
+    nineInt,
+    twelveInt,
+    thirteenInt,
+  } = props;
   const data: DataType[] = [
     {
       key: "1",
       name: "08.00-09.00",
-      age: eight,
+      externa: eight,
+      interna: eightInt,
     },
     {
       key: "2",
       name: "09.00-12.00",
-      age: nine,
+      externa: nine,
+      interna: nineInt,
     },
     {
       key: "3",
       name: "12.00-13.00",
-      age: twelve,
+      externa: twelve,
+      interna: twelveInt,
     },
     {
       key: "4",
       name: "13.00-16.00",
-      age: thirteen,
+      externa: thirteen,
+      interna: thirteenInt,
     },
     {
       key: "5",
       name: "Totalt för dagen",
-      age: result,
+      externa: result,
+      interna: "", // You can set the "Interna" value for the last row here.
     },
   ];
 

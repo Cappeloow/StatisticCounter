@@ -16,7 +16,7 @@ function DataCard(props: any) {
     e.stopPropagation();
   };
   return (
-    <Card onClick={() => addAmountToMatter(matter)}>
+    <div className="CardContainer" onClick={() => addAmountToMatter(matter)}>
       <div className="Card">
         <div className="containerOfMatter">
           <Title
@@ -50,7 +50,7 @@ function DataCard(props: any) {
           </Text>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
 

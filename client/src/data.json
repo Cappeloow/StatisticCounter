@@ -6,7 +6,7 @@
             "id":0,
             "task": "Reception",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
@@ -14,7 +14,7 @@
             "task":"Reception",
             "icon":"TM",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
@@ -22,21 +22,21 @@
             "task": "Infomailen",
             "amount":0,
             "icon":"mail",
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":3,
             "task":"Inpassage",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":4,
             "task":"Turism",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
@@ -44,126 +44,126 @@
             "task":"Turism",
             "icon":"TM",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":6,
             "task":"Evenemangsbiljetter",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":7,
             "task":"Föreningar",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":8,
             "task":"Konsumentrådgivning",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":9,
             "task":"Lokalbokning",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":10,
             "task":"Lokalnycklar/taggar",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":11,
             "task":"Fonder",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":12,
             "task":"Tomtkö",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":13,
             "task":"Blanketter",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":14,
             "task":"Polisen",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":15,
             "task":"Utländska",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":16,
             "task":"Övrigt",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"extern"
         },
         {
             "id":17,
             "task":"Kuponger",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         },
         {
             "id":18,
             "task":"Tjänsteresor",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         },
         {
             "id":19,
             "task":"Leasingbil/Cykel",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         },
         {
             "id":20,
             "task":"Sammanträdesrum",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         },
         {
             "id":21,
             "task":"Telefoni",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         },
         {
             "id":22,
             "task":"Övrigt",
             "amount":0,
-            "time":[""],
+            "time":[],
             "category":"intern"
         }
     ]
