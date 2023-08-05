@@ -16,9 +16,12 @@ function DataCard(props: any) {
     e.stopPropagation();
   };
   return (
-    <div className="CardContainer" onClick={() => addAmountToMatter(matter)}>
+    <div className="CardContainer">
       <div className="Card">
-        <div className="containerOfMatter">
+        <div
+          className="containerOfMatter"
+          onClick={() => addAmountToMatter(matter)}
+        >
           <Title
             style={{ userSelect: "none" }}
             className="titleOfMatter"

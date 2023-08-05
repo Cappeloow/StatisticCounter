@@ -12,6 +12,7 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size:20px;
+    user-select: none;
 }
 .resetButton:hover {
     background-color: rgba(255, 0, 0, 0.61);

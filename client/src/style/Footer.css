@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Shadows+Into+Light&display=swap');
+
 footer {
 background-color: aliceblue;
 text-align: center;
 font-size:20px;
-font-family: 'Poppins', sans-serif;
 margin-top:10px;
+}
+
+footer > * {
+    font-family: 'Shadows Into Light';
 }
